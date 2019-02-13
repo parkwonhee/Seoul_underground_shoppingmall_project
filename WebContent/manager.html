@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>서울 지하상가 정복하기</title>
+	<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta charset="UTF-8">
+	<style type="text/css">
+*{
+	text-decoration: none;
+}
+body{
+	margin: 0px;
+	background-color: rgb(217,238,255);
+}
+.section {
+	float: left;
+	width: 100%;
+} 
+#header-area{
+	text-align: center;
+	font-weight: bold;
+	padding: 0px 0px;
+	background-color: rgb(89,181,255);
+	margin: 0px;
+	line-height: 180%;
+}
+#header-area h3 {
+	display: inline-block;
+	margin: 0px 30px 0px 0px;
+	color: white;
+}
+.bar{
+  background-color: rgb(89,181,255);
+  width : 1.6em;
+  height: 1.6em;
+  float: left;
+  margin: 0.1em 0.1em;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 1.6em;
+}
+.form {
+	float: center;
+	width: 100%;
+	padding: 0px 16px;
+	box-sizing: border-box;
+}
+.form input[type=text] {
+	float: right;
+	width: 50%;
+	margin-bottom: 0px;
+	padding: 15px 0px 12px 50px;
+	box-sizing: border-box;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+}
+.form input[type=submit] {
+	float: center;
+	width: 20%;
+	margin: 0px 0px 0px 110px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	color: white;
+	background-color: rgb(89,181,255);
+	border: none;
+	border-radius: 20px;
+}
+.form input[type=submit3] {
+	float: center;
+	width: 20%;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	color: white;
+	background-color: rgb(89,181,255);
+	border: none;
+	border-radius: 20px;
+}
+.gotomall{
+	text-align: center;
+	font-size: 3em;
+	font-style: weight 5px;
+	margin: 3px 0px 0px 0px;
+}
+.ifcmall{
+	text-align: center;
+	font-size: 3em;
+	font-style: weight 5px;
+	margin: 3px 0px 0px 0px;
+}
+.form2 {
+	float: center;
+	width: 100%;
+	padding: 0px 16px;
+	box-sizing: border-box;
+}
+.form2 input[type=text] {
+	float: right;
+	width: 50%;
+	margin-bottom: 0px;
+	padding: 15px 0px 12px 50px;
+	box-sizing: border-box;
+	border: 1px solid #DDD;
+	border-radius: 20px;
+}
+.form2 input[type=submit] {
+	float: center;
+	width: 20%;
+	margin: 0px 0px 0px 40px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	color: white;
+	background-color: rgb(89,181,255);
+	border: none;
+	border-radius: 20px;
+}
+.form2 input[type=submit2] {
+	float: center;
+	width: 30%;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	color: white;
+	background-color: rgb(89,181,255);
+	border: none;
+	border-radius: 20px;
+}
+.form2 input[type=submit3] {
+	float: center;
+	width: 20%;
+	margin: 0px 0px 0px 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	color: white;
+	background-color: rgb(89,181,255);
+	border: none;
+	border-radius: 20px;
+}
+</style>	
+</head>
+<body>
+	<div id="header-area" >
+		 <a href = "main1.html">
+   			 <div class="bar" style = "background-image:url('image/6.png')"></div>
+	    </a>
+		<h3>&nbsp;서울 지하상가 정복하기&nbsp;</h3>
+	</div>
+	<h1 class="gotomall">
+		Gotomall
+	</h1>
+	<div id="contents-area" class="section">
+	<div class="form">
+		<input id="cmd1" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;구역"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;구역 : </h1>
+		<input id="area1" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;위치"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치 : </h1>
+		<input id="name1" type="text" placeholder="&nbsp;가게 이름"><h1>&nbsp;&nbsp;&nbsp;가게명 : </h1>
+		<input type="submit" value="삽입" onclick="insert1()">
+		<input type="submit" value="삭제" onclick="delete1()">
+	</div>
+	<h1 class="ifcmall">
+		IFC몰
+	</h1>
+	<div class="form2">
+		<input id="cmd2" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;층"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;층 : </h1>
+		<input id="area2" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;위치"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위치 : </h1>
+		<input id="name2" type="text" placeholder="&nbsp;가게 이름"><h1>&nbsp;&nbsp;&nbsp;가게명 : </h1>
+		<input type="submit" value="삽입" onclick="insert2()">
+		<input type="submit" value="삭제" onclick="delete2()">
+		<input type="submit" value="로그아웃" onclick="logout()">
+</div>
+</body>
+</html>
+
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/core.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	//AJAX.call("session.jsp", null, function (data) {
+	//	var id = data.trim();
+		
+	//});
+});
+
+function logout() {
+	if(confirm("로그아웃 하시겠습니까?") == true) {
+		window.location.href = "main1.html";
+	}
+}
+//gotomall의 insert와 delete
+function insert1() {
+	if (check1() == false) return;
+	
+	var cmd = $("#cmd1").val().trim();
+	var area = $("#area1").val().trim();
+	var name = $("#name1").val().trim();
+	
+	var params =  "cmd=" + cmd + "&area=" + area + "&name=" + name;
+	AJAX.call("insert1.jsp", params, function(data) {
+		var code = data.trim();
+		if (code == "OK") {
+			alert("삽입되었습니다.");
+		}
+		else if (code == "EX") {
+			alert("이름 중복 요류");
+		}
+		
+	});
+}
+
+function delete1() {
+	if (check1() == false) return;
+	
+	var cmd = $("#cmd1").val().trim();
+	var area = $("#area1").val().trim();
+	var name = $("#name1").val().trim();
+	
+	var params =  "name=" + name;
+	
+	AJAX.call("delete1.jsp", params, function(data) {
+		var code = data.trim();
+		if (code == "OK") {
+			alert("삭제되었습니다.");
+		}
+		else  {
+			alert("no delete");
+		}
+		
+	});
+}
+
+function check1() {
+	var ucmd = $("#cmd1").val().trim();
+	if (ucmd == "") {
+		alert("구역를 입력해주세요.");
+		return false;
+	}
+
+	var uarea = $("#area1").val().trim();
+	if (uarea == "") {
+		alert("위치를 입력해주세요.");
+		return false;
+	}
+	
+	var uname = $("#name1").val().trim();
+	if (uname == "") {
+		alert("가게명을 입력해주세요.");
+		return false;
+	}
+	return true;
+}
+
+//ifc몰 의 insert 와 delete
+function insert2() {
+	if (check2() == false) return;
+	
+	var cmd = $("#cmd2").val().trim();
+	var area = $("#area2").val().trim();
+	var name = $("#name2").val().trim();
+	
+	var params =  "cmd=" + cmd + "&area=" + area + "&name=" + name;
+	AJAX.call("insert2.jsp", params, function(data) {
+		var code = data.trim();
+		if (code == "OK") {
+			alert("삽입되었습니다.");
+			window.location.href="manager.html";
+		}
+		else if (code == "EX") {
+			alert("이름 중복 요류");
+		}
+		
+	});
+}
+
+function delete2() {
+	if (check2() == false) return;
+	
+	var cmd = $("#cmd2").val().trim();
+	var area = $("#area2").val().trim();
+	var name = $("#name2").val().trim();
+	
+	var params =  "name=" + name;
+	
+	AJAX.call("delete2.jsp", params, function(data) {
+		var code = data.trim();
+		if (code == "OK") {
+			alert("삭제되었습니다.");
+		}
+		else  {
+			alert("no delete");
+		}
+		
+	});
+}
+
+function check2() {
+	var ucmd = $("#cmd2").val().trim();
+	if (ucmd == "") {
+		alert("층를 입력해주세요.");
+		return false;
+	}
+
+	var uarea = $("#area2").val().trim();
+	if (uarea == "") {
+		alert("위치를 입력해주세요.");
+		return false;
+	}
+	
+	var uname = $("#name2").val().trim();
+	if (uname == "") {
+		alert("가게명을 입력해주세요.");
+		return false;
+	}
+	return true;
+}
+</script>
